@@ -1,0 +1,37 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n, q, size, value, which, index;
+
+    // grabing the values of n and q
+    cin >> n >> q;
+    
+    //setting vector of vector<int> arr
+    vector<vector<int>> nVec;
+    
+    
+    
+    for(int i = 0; i < n; ++i){                //setting first loop to be the number of arr
+        cin >> size;                           //grabbing the size of the initial arr
+        vector<int> iVec;                      // initializing vector to grasp values
+        for(int j =0; j < size; j++){          // running through the values of getign the size.
+            cin >> value;
+            iVec.push_back(value);            // pushig the values in 
+        }
+        nVec.push_back(iVec);                 // pushing the vector into the VECTOR of INT
+    }
+   
+   for(int k =0 ;k <q ; ++k){                // running through the que
+       cin >>which >> index;                 // grasping want info is wanted
+       cout << nVec[which][index] <<endl;    // displaying out
+   } 
+   
+   return 0;
+}
